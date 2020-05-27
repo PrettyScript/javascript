@@ -8,7 +8,15 @@
 
 
 //your code...
+// function string(str) {
+//     if(str == '') {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// };
 
+// console.log(string('Hello'));
 
 
 
@@ -21,7 +29,9 @@
 
 
 //your code...
-
+// let word = 'Learning JavaScript is fun!';
+// let newWord = word.replace('fun', 'cool');
+// console.log(newWord);
 
 
 
@@ -83,17 +93,17 @@
 // Problem 7:
 
 // 7.a - Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
-const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
+// const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
-function maxNumber(numbers) {
-    //your code...
-}
+// function maxNumber(numbers) {
+//     //your code...
+// }
 
-// 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
+// // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
-function sortNums(numbers,desc=false) {
-    //your code...
-};
+// function sortNums(numbers,desc=false) {
+//     //your code...
+// };
 
 
 
@@ -102,11 +112,11 @@ function sortNums(numbers,desc=false) {
 // Problem 8:
 //add an example of at least 5 JavaScript data types to the given mapObj.  The key is the example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
-const mapObj = new Map();
-mapObj.set({company : "TEKsystems"},"object");
+// const mapObj = new Map();
+// mapObj.set({company : "TEKsystems"},"object");
 
 
-console.log(mapObj.has({company : "TEKsystems"}));  
+// console.log(mapObj.has({company : "TEKsystems"}));  
 //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} exists in the mapObj.
 
 //your code...
@@ -117,7 +127,7 @@ console.log(mapObj.has({company : "TEKsystems"}));
 /************************************************************* */
 //Problem 11:
 
-let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
+// let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //reverse the array, without modifying the ones array.
 
 
@@ -125,9 +135,9 @@ let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //Problem 12:
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  It should return the output of the callback function.
 
-function performer(cb) {
-    //code goes here
-}
+// function performer(cb) {
+//     //code goes here
+// }
 
 
 /************************************************************* */

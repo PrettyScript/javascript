@@ -34,11 +34,6 @@ console.log(convertToFahrenheit(21.11));
 let age = 18;
 
 function canVote() {
-    // if(age >= 18) {
-    //     console.log('Yes');
-    // } else {
-    //     console.log('No');
-    // }
     return age >= 18 ? 'yes' : 'no';
 }
 
@@ -55,17 +50,18 @@ console.log(canVote());
 //your code...
 
 let str = "The five boxing wizards jump quickly.";
-
+let arr = [];
 
 function convertStrToArr() {
-    return str.split(' ');
+    arr = str.split(' ');
+    return arr;
 }
 
 console.log(convertStrToArr());
 
 
 function convertArrToStr() {
-    return str.split(' ').join(' ');
+    return arr.join(' ');
 }
 
 console.log(convertArrToStr());
@@ -80,7 +76,14 @@ console.log(convertArrToStr());
 
 //your code...
 
+let phoneNum = 9722659819;
 
+function reverseNum() {
+    let str = phoneNum.toString();
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseNum());
 
 
 
@@ -90,14 +93,18 @@ console.log(convertArrToStr());
 
 //your code...
 
-let phoneNum = 7862742673;
-
-function reverseNum() {
-    let str = phoneNum.toString();
-    return str.split('').reverse().join('');
+let myCar = {
+    make: 'Honda',
+    model: 'Civic',
+    year: 2013,
+    color: 'Grey'
 }
 
-console.log(reverseNum());
+function carObject(car) {
+    return `YEAR: ${car.year} \nCOLOR: ${car.color} \nMAKE: ${car.make} \nMODEL: ${car.model}`
+}
+
+console.log(carObject(myCar));
 
 
 
@@ -119,7 +126,7 @@ function evenOrOdd() {
     }
 }
 
-// evenOrOdd();
+evenOrOdd();
 
 
 
@@ -142,7 +149,7 @@ function fizzBuzz() {
     }
 }
 
-// fizzBuzz();
+fizzBuzz();
 
 
 /************************************************************* */
@@ -172,26 +179,22 @@ const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','ama
 // corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  "Potatoes are salty", "Lemon is sour".
 
 for(let i=0; i<foodArray.length; i++) {
-    // console.log(foodArray[i], adjectiveArray[i]);
-    if(typeof foodArray[i] === 'string' ) {
-        if(foodArray[i].charAt(foodArray.length-1) === 's') {
-            console.log(foodArray[i], adjectiveArray[i], 'plural');
+    if((typeof foodArray[i]) == 'string' ) {
+        if(foodArray[i].charAt(foodArray[i].length-1) == 's') {
+            console.log(`${foodArray[i]} are ${adjectiveArray[i]}`);
         } else {
-            console.log(foodArray[i], adjectiveArray[i], 'singular');
+            console.log(`${foodArray[i]} is ${adjectiveArray[i]}`);
         }
-    } else if(typeof foodArray[i] === 'object') {
-        console.log(foodArray[i], adjectiveArray[i], 'object');
+    } else if((typeof foodArray[i]) == 'object') {
+        console.log(`${foodArray[i].school} is ${adjectiveArray[i]}`);
     }
-    
-    
-    // console.log(foodArray[i] == school, 'object')
 }
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
 const operations = ['+', '-', '*', '/'];
 function doMath(x, y) {
     let operation = operations[Math.floor(Math.random() * operations.length)];
-    console.log(`The ${operation} ran.`);
+    console.log(`The ${operation} operation ran.`);
     if(operation == '+') {
         console.log(x + y);
     } else if(operation == '-') {

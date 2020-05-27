@@ -4,14 +4,18 @@
 // Problem 1: Refactor the for() loop to be a while loop.
 //
 
-for(let i=0; i<10; i++) {
-    console.log(" the value of i in the loop is : " + i);
-}
+// for(let i=0; i<10; i++) {
+//     console.log(" the value of i in the loop is : " + i);
+// }
 
 
 //your code...
+// let i = 0;
 
-
+// while(i < 10) {
+//     i++;
+//     console.log(" the value of i in the loop is : " + i);
+// }
 
 
 /************************************************************* */
@@ -48,36 +52,62 @@ for(let i=0; i<10; i++) {
 
 const day = "friday";
 
-if(day === "monday") {
-    console.log("we got a long week ahead of us...");
-} else if(day === "tuesday") {
-    console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-} else if (day === "wednesday") {
-    console.log("We are smack dab in the middle of the week");
-} else if (day === "thursday") {
-    console.log("Thursday night... the mood is right");
-} else if (day === "friday") {
-    console.log("TGIF.  Friday truly is the best day of the week!")
-} else {
-    console.log("It's a weekend!")
-}
+// if(day === "monday") {
+//     console.log("we got a long week ahead of us...");
+// } else if(day === "tuesday") {
+//     console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+// } else if (day === "wednesday") {
+//     console.log("We are smack dab in the middle of the week");
+// } else if (day === "thursday") {
+//     console.log("Thursday night... the mood is right");
+// } else if (day === "friday") {
+//     console.log("TGIF.  Friday truly is the best day of the week!")
+// } else {
+//     console.log("It's a weekend!")
+// }
+
+// switch (day) {
+//     case 'monday': 
+//         console.log("we got a long week ahead of us...");
+//         break;
+//     case 'tuesday':
+//         console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+//         break;
+//     case 'wednesday':
+//         console.log("We are smack dab in the middle of the week");
+//         break;
+//     case 'thursday':
+//         console.log("Thursday night... the mood is right");
+//         break;
+//     case 'friday':
+//         console.log("TGIF.  Friday truly is the best day of the week!");
+//         break;
+//     default: 
+//         console.log("It's a weekend!");       
+// }
 
 
 
 /************************************************************* */
 // Problem 5: Refactor the following functions to use a ternary expression:
 const age = 10;
-if (age > 21) console.log("adult"); else {
-    console.log("minor");
-}
+// if (age > 21) console.log("adult"); else {
+//     console.log("minor");
+// }
 
-if (age > 13 && age < 19) console.log('teen'); else {
-    console.log("not a teenager");
-};
+// if (age > 13 && age < 19) console.log('teen'); else {
+//     console.log("not a teenager");
+// };
 
-if (age > 65) console.log("retired"); else {
-    console.log("still working...");
-}
+// if (age > 65) console.log("retired"); else {
+//     console.log("still working...");
+// }
+
+// age > 21 ? console.log('adult') : console.log('minor');
+
+// age > 13 && age < 19 ? console.log('teen') : console.log('not a teenage');
+
+// age > 65 ? console.log('retired') : console.log('still working...');
 
 
 /************************************************************* */
@@ -97,11 +127,48 @@ if (age > 65) console.log("retired"); else {
 
 //your code...
 
+// let jess = {
+//     name: 'Jessica',
+//     age: 24,
+//     gender: 'Female',
+//     hobbies: 'Eating',
+//     profession: 'Student',
+//     education: 'TEKacademy',
+//     learn: function() {
+//         console.log(this.name);
+//     },
+//     introduction: function() {
+//         console.log(`Hi, my name is ${this.name} and one of my hobbies are ${this.hobbies}.`)
+//     }
+// }
+
+
+
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
 //your code...
+
+// let album = {
+//     name: '24K Magic',
+//     artist: 'Bruno Mars',
+//     releaseYear: 2016,
+//     genre: 'R&B',
+//     length: '34 minutes',
+//     label: 'Atlantic',
+//     singles: {
+//         song: '24K Magic',
+//         song: 'That\'s What I Like',
+//         song: 'Versace on the Floor',
+//         song: 'Chunky',
+//         song: 'Finesse'
+//     },
+//     summary: function() {
+//         console.log(`${this.name} is the third studio album recorded by singer and songwriter ${this.artist} and released by ${this.label} on November 18, 2016.`)
+//     }
+// }
+
 
 
 
@@ -119,6 +186,14 @@ if (age > 65) console.log("retired"); else {
 
 //your code...
 
+// function multipe(x){
+//     return function fn(y) {
+//         return x * y;
+//     } 
+//   };
+  
+//   let triple = multipe(3);
+//   console.log(triple(3));
 
 // 2. Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
@@ -127,3 +202,13 @@ if (age > 65) console.log("retired"); else {
 //your code...
 
 
+function stockGain(basis) {
+    let message = ' is how much the stock has increased.'
+    return function(yrs) {
+        let r = 0.05;
+        console.log((basis*r*yrs) + message);
+    }
+}
+
+let futureValue = stockGain(10000);
+futureValue(5);
