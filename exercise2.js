@@ -25,6 +25,23 @@
 
 //your code...
 
+// function sum() {
+//     return 30 + 2;
+// }
+
+// console.log(sum());
+
+// function multiply() {
+//     return sum() * 20;
+// }
+
+// console.log(multiply());
+
+// function divide() {
+//     return multiply() / Math.pow(10, 2);
+// }
+
+// console.log(divide());
 
 /************************************************************* */
 //Problem 3:
@@ -42,6 +59,16 @@
 // 125
 // undefined
 // ""
+
+//TODO: redo question #3
+
+// let truthy = 'this value does exist.'
+// let falsy = 'this is an invalid value.'
+// if(0){
+//     console.log(truthy);
+// }else {
+//     console.log(falsy);
+// }
 
 
 
@@ -177,7 +204,11 @@ const age = 10;
 
 //your code...
 
+// function myFavoriteData() {
+//     return `Objects: can store so much data, and is easy to access vs an Array \nBoolean: return either one or two values, simple use\nThe typeOf operator: provides the type of a variable or an expression`
+// }
 
+// console.log(myFavoriteData());
 
 /************************************************************* */
 //Bonus assignments:
@@ -202,13 +233,13 @@ const age = 10;
 //your code...
 
 
-function stockGain(basis) {
-    let message = ' is how much the stock has increased.'
-    return function(yrs) {
-        let r = 0.05;
-        console.log((basis*r*yrs) + message);
-    }
-}
+// function stockGain(basis) {
+//     let message = ' is how much the stock has increased.'
+//     return function(yrs) {
+//         let r = 0.05;
+//         console.log((basis*r*yrs) + message);
+//     }
+// }
 
-let futureValue = stockGain(10000);
-futureValue(5);
+// let futureValue = stockGain(10000);
+// futureValue(5);
