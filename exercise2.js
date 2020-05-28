@@ -1,23 +1,27 @@
 //Complete the following problems:
 
-/************************************************************* */
+console.log("*************************************************************");
+console.log("PROBLEM 1:");
+console.log("*************************************************************");
 // Problem 1: Refactor the for() loop to be a while loop.
 //
 
-// for(let i=0; i<10; i++) {
-//     console.log(" the value of i in the loop is : " + i);
-// }
+for(let i=0; i<10; i++) {
+    console.log(" the value of i in the loop is : " + i);
+}
 
 
-//your code...
-// let i = 0;
+// your code...
+let i = 0;
 
-// while(i < 10) {
-//     i++;
-//     console.log(" the value of i in the loop is : " + i);
-// }
+while(i < 10) {
+    i++;
+    console.log(" the value of i in the loop is : " + i);
+}
 
-
+console.log("*************************************************************");
+console.log("PROBLEM 2:");
+console.log("*************************************************************");
 /************************************************************* */
 // Problem 2:
 // multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
@@ -25,24 +29,28 @@
 
 //your code...
 
-// function sum() {
-//     return 30 + 2;
-// }
+function sum() {
+    return 30 + 2;
+}
 
-// console.log(sum());
+console.log(sum());
 
-// function multiply() {
-//     return sum() * 20;
-// }
+function multiply() {
+    return sum() * 20;
+}
 
-// console.log(multiply());
+console.log(multiply());
 
-// function divide() {
-//     return multiply() / Math.pow(10, 2);
-// }
+function divide() {
+    return multiply() / Math.pow(10, 2);
+}
 
-// console.log(divide());
+console.log(divide());
 
+
+console.log("*************************************************************");
+console.log("PROBLEM 3:");
+console.log("*************************************************************");
 /************************************************************* */
 //Problem 3:
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation.
@@ -60,83 +68,99 @@
 // undefined
 // ""
 
-//TODO: redo question #3
 
-// let truthy = 'this value does exist.'
-// let falsy = 'this is an invalid value.'
-// if(0){
-//     console.log(truthy);
-// }else {
-//     console.log(falsy);
-// }
+let truthy = 'is truthy because its value is true when evaluated in a boolean context.'
+let falsy = 'is falsy because its value is invalid when evaluated in a boolean context'
+console.log(`
+20 ${truthy}
+0 ${falsy}
+"zero"; ${falsy}. There is a semicolon which is a statement, and statements don't evaluate as true
+const zero = 20; ${falsy}. This is a variable assignment
+null ${falsy}
+"0" ${truthy}
+!"" ${truthy}. Any empty string is false but with the "!" meaning "NOT" this statement becomes "NOT FALSE" which evaluates to true.
+{} ${truthy}
+() => {console.log("hello TEKcamp!"); ${falsy}. This is an arrow function.
+125 ${truthy}
+undefined ${falsy}
+"" ${falsy}
+`)
 
 
 
 
+console.log("*************************************************************");
+console.log("PROBLEM 4:");
+console.log("*************************************************************");
 /************************************************************* */
 // Problem 4:
 // Refactor the following code using a switch statement:
 
 const day = "friday";
 
-// if(day === "monday") {
-//     console.log("we got a long week ahead of us...");
-// } else if(day === "tuesday") {
-//     console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-// } else if (day === "wednesday") {
-//     console.log("We are smack dab in the middle of the week");
-// } else if (day === "thursday") {
-//     console.log("Thursday night... the mood is right");
-// } else if (day === "friday") {
-//     console.log("TGIF.  Friday truly is the best day of the week!")
-// } else {
-//     console.log("It's a weekend!")
-// }
+if(day === "monday") {
+    console.log("we got a long week ahead of us...");
+} else if(day === "tuesday") {
+    console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+} else if (day === "wednesday") {
+    console.log("We are smack dab in the middle of the week");
+} else if (day === "thursday") {
+    console.log("Thursday night... the mood is right");
+} else if (day === "friday") {
+    console.log("TGIF.  Friday truly is the best day of the week!")
+} else {
+    console.log("It's a weekend!")
+}
 
-// switch (day) {
-//     case 'monday': 
-//         console.log("we got a long week ahead of us...");
-//         break;
-//     case 'tuesday':
-//         console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-//         break;
-//     case 'wednesday':
-//         console.log("We are smack dab in the middle of the week");
-//         break;
-//     case 'thursday':
-//         console.log("Thursday night... the mood is right");
-//         break;
-//     case 'friday':
-//         console.log("TGIF.  Friday truly is the best day of the week!");
-//         break;
-//     default: 
-//         console.log("It's a weekend!");       
-// }
+switch (day) {
+    case 'monday': 
+        console.log("we got a long week ahead of us...");
+        break;
+    case 'tuesday':
+        console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+        break;
+    case 'wednesday':
+        console.log("We are smack dab in the middle of the week");
+        break;
+    case 'thursday':
+        console.log("Thursday night... the mood is right");
+        break;
+    case 'friday':
+        console.log("TGIF.  Friday truly is the best day of the week!");
+        break;
+    default: 
+        console.log("It's a weekend!");       
+}
 
 
-
+console.log("*************************************************************");
+console.log("PROBLEM 5:");
+console.log("*************************************************************");
 /************************************************************* */
 // Problem 5: Refactor the following functions to use a ternary expression:
 const age = 10;
-// if (age > 21) console.log("adult"); else {
-//     console.log("minor");
-// }
+if (age > 21) console.log("adult"); else {
+    console.log("minor");
+}
 
-// if (age > 13 && age < 19) console.log('teen'); else {
-//     console.log("not a teenager");
-// };
+if (age > 13 && age < 19) console.log('teen'); else {
+    console.log("not a teenager");
+};
 
-// if (age > 65) console.log("retired"); else {
-//     console.log("still working...");
-// }
+if (age > 65) console.log("retired"); else {
+    console.log("still working...");
+}
 
-// age > 21 ? console.log('adult') : console.log('minor');
+age > 21 ? console.log('adult') : console.log('minor');
 
-// age > 13 && age < 19 ? console.log('teen') : console.log('not a teenage');
+age > 13 && age < 19 ? console.log('teen') : console.log('not a teenage');
 
-// age > 65 ? console.log('retired') : console.log('still working...');
+age > 65 ? console.log('retired') : console.log('still working...');
 
 
+console.log("*************************************************************");
+console.log("PROBLEM 6:");
+console.log("*************************************************************");
 /************************************************************* */
 // Problem 6: Create an object literal that represents yourself.  set it to a variable that appropriately describes the object.  Include the following properties:
 /*
@@ -154,62 +178,73 @@ const age = 10;
 
 //your code...
 
-// let jess = {
-//     name: 'Jessica',
-//     age: 24,
-//     gender: 'Female',
-//     hobbies: 'Eating',
-//     profession: 'Student',
-//     education: 'TEKacademy',
-//     learn: function() {
-//         console.log(this.name);
-//     },
-//     introduction: function() {
-//         console.log(`Hi, my name is ${this.name} and one of my hobbies are ${this.hobbies}.`)
-//     }
-// }
+let jess = {
+    name: 'Jessica',
+    age: 24,
+    gender: 'Female',
+    hobbies: 'Eating',
+    profession: 'Student',
+    education: 'TEKacademy',
+    learn: function() {
+        return this.name
+    },
+    introduction: function() {
+        return `Hi, my name is ${this.name} and one of my hobbies are ${this.hobbies}.`
+    }
+}
+
+console.log(jess.introduction());
 
 
 
-
+console.log("*************************************************************");
+console.log("PROBLEM 6:");
+console.log("*************************************************************");
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
 //your code...
 
-// let album = {
-//     name: '24K Magic',
-//     artist: 'Bruno Mars',
-//     releaseYear: 2016,
-//     genre: 'R&B',
-//     length: '34 minutes',
-//     label: 'Atlantic',
-//     singles: {
-//         song: '24K Magic',
-//         song: 'That\'s What I Like',
-//         song: 'Versace on the Floor',
-//         song: 'Chunky',
-//         song: 'Finesse'
-//     },
-//     summary: function() {
-//         console.log(`${this.name} is the third studio album recorded by singer and songwriter ${this.artist} and released by ${this.label} on November 18, 2016.`)
-//     }
-// }
+let album = {
+    name: '24K Magic',
+    artist: 'Bruno Mars',
+    releaseYear: 2016,
+    genre: 'R&B',
+    length: '34 minutes',
+    label: 'Atlantic',
+    singles: {
+        song: '24K Magic',
+        song: 'That\'s What I Like',
+        song: 'Versace on the Floor',
+        song: 'Chunky',
+        song: 'Finesse'
+    },
+    summary: function() {
+        console.log(`${this.name} is the third studio album recorded by singer and songwriter ${this.artist} and released by ${this.label} on November 18, 2016.`)
+    }
+}
+
+album.summary();
 
 
 
-
+console.log("*************************************************************");
+console.log("PROBLEM 7:");
+console.log("*************************************************************");
 /************************************************************* */
 //Problem 7: create a function that outputs your 3 favorite data types, with a message explaining why you like that data type.
 
 //your code...
 
-// function myFavoriteData() {
-//     return `Objects: can store so much data, and is easy to access vs an Array \nBoolean: return either one or two values, simple use\nThe typeOf operator: provides the type of a variable or an expression`
-// }
+function myFavoriteData() {
+    return `Objects: can store so much data, and is easy to access vs an Array \nBoolean: returns either one or two values (true or false)\nString: it's an array of characters`
+}
 
-// console.log(myFavoriteData());
+console.log(myFavoriteData());
 
+console.log("*************************************************************");
+console.log("BONUS:");
+console.log("*************************************************************");
 /************************************************************* */
 //Bonus assignments:
 
@@ -217,14 +252,14 @@ const age = 10;
 
 //your code...
 
-// function multipe(x){
-//     return function fn(y) {
-//         return x * y;
-//     } 
-//   };
+function multipe(x){
+    return function fn(y) {
+        return x * y;
+    } 
+  };
   
-//   let triple = multipe(3);
-//   console.log(triple(3));
+  let triple = multipe(3);
+  console.log(triple(3));
 
 // 2. Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
@@ -233,13 +268,13 @@ const age = 10;
 //your code...
 
 
-// function stockGain(basis) {
-//     let message = ' is how much the stock has increased.'
-//     return function(yrs) {
-//         let r = 0.05;
-//         console.log((basis*r*yrs) + message);
-//     }
-// }
+function stockGain(basis) {
+    let message = ' is how much the stock has increased.'
+    return function(yrs) {
+        let r = 0.05;
+        console.log((basis*r*yrs) + message);
+    }
+}
 
-// let futureValue = stockGain(10000);
-// futureValue(5);
+let futureValue = stockGain(10000);
+futureValue(5);

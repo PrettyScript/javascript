@@ -43,6 +43,19 @@
 
 //your code...
 
+// const array = () => {
+//     let arr = [1, 2, 3, 4, 5];
+//     let newArr = [];
+
+//     for(let i =0; i<arr.length; i++) {
+//         let square = arr[i] * arr[i]
+//         newArr.push(square);
+//     }
+
+//     return newArr;
+// };
+
+// console.log(array());
 
 
 
@@ -55,7 +68,19 @@
 
 
 //your code...
+// const greaterThan3 = () => {
+//     let arr = [1, 3, 5, 7, 9, 1, 3, 5];
+//     let newArr = [];
 
+//     for(let i=0; i< arr.length; i++) {
+//         if(arr[i] > 3) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// };
+
+// console.log(greaterThan3());
 
 
 
@@ -68,7 +93,18 @@
 
 
 //your code...
+// const numArr = () => {
+//     let arr = [10, 16, 25, 28, 19];
+//     let sum = 0;
 
+//     for(let i=0; i<arr.length; i++) {
+//         sum += arr[i];
+//     }
+
+//     return sum;
+// };
+
+// console.log(numArr());
 
 
 
@@ -81,9 +117,20 @@
 // Write a function that takes in a DNA string as a parameter and returns an array with the complementary strand. For example, a string of "GCTA" would return an array of ["C", "G", "A", "T"].  
 
 
-
+//TODO: work on this one again, not complete
 //your code...
+// const pairs = () => {
+//     let dna = "GCTA";
+//     let arr = [];
 
+//     let str = dna.split('');
+    
+//     for(let i=0; i<str.length; i++) {
+//         if(str[i] == '')
+//     }
+// };
+
+// console.log(pairs());
 
 
 
@@ -128,7 +175,8 @@
 //Problem 11:
 
 // let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
-//reverse the array, without modifying the ones array.
+// reverse the array, without modifying the ones array.
+// console.log(ones.reverse());
 
 
 /************************************************************* */
